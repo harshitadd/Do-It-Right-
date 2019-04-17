@@ -24,9 +24,12 @@ Machine Learning :
 
 FUTURE EXPANSION :
 ● Flutter application
-● integration with
-fitbit for ADDITION
-OF MORE
-SURVEILLANCE
-PARAMETERS SUCH AS
-HEARTBEAT.
+● integration with fitbit for ADDITION OF MORE SURVEILLANCE PARAMETERS SUCH AS HEARTBEAT.
+
+## DEMO
+
+![vihaan](https://user-images.githubusercontent.com/31439716/56262277-a4d52280-60fb-11e9-9cd0-9a87795b77ba.png)
+
+The user is given an option to choose from a set of excercises. Once he clicks on them, 2 parallel windows open : one showing the seed video and the other showing the real time frame of the user performing the excercise. 
+As soon as the user deviates from the excercise in the seed video - a buzzer is sounded and exact point of default is printed on the screen . 
+
