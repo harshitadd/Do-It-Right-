@@ -23,3 +23,8 @@ Machine Learning :
 ● scipy
 ● cv2
 
+## DEMO 
+![vihaan](https://user-images.githubusercontent.com/31439716/56262277-a4d52280-60fb-11e9-9cd0-9a87795b77ba.png)
+
+A sample video of the real time stream mapped with the sample video which notifies us of the error when committed through a beep.
+
