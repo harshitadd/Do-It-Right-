@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    {% if title %}
+        <title>Flask Blog - {{ title }}</title>
+    {% else %}
+        <title>Air Notes</title>
+    {% endif %}
+</head>
+<body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/">DoItRight</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+              <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if current_user.is_authenticated %}
+                <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
+                <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
+                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+
+<div class="container e">
+
+    <div class="row">
+        <div class="col-4">
+                <div class="card">
+                        <div class="img-box">
+                            <img src="https://images.pexels.com/photos/209983/pexels-photo-209983.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
+                        </div>
+                        <div class="content">
+                            <h2> Jumping Jacks</h2>
+                            <p>
+                                    The rigorous calisthenic moves help improve your stamina, are a great exercise for the cardiovascular system, and relieve stress.
+
+                            </p>
+                            <a href="{{ url_for('fn') }}"><button type="button" class="btn btn-primary" id="bu1">Try Now</button></a>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="col-4">
+                <div class="card">
+                        <div class="img-box">
+                            <img src="https://images.pexels.com/photos/2294353/pexels-photo-2294353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                        </div>
+                        <div class="content">
+                            <h2>Side Planks</h2>
+                            <p>
+                                    A powerful arm and wrist strengthener, Side Plank takes its two-armed sibling to the next level, as an arm balance.
+
+                            </p>
+                            <a href="{{ url_for('fn') }}"><button type="button" class="btn btn-primary" id="bu2">Try Now</button></a>
+                        </div>
+                    </div>
+        </div>
+        <div class="col-4">
+                <div class="card">
+                        <div class="img-box">
+                            <img src="https://images.pexels.com/photos/2413552/pexels-photo-2413552.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                        </div>
+                        <div class="content">
+                            <h2> Dumble Press</h2>
+                            <p>
+                                    Compound exercises, which utilize multiple joints and muscles, are perfect for busy bees as they work several parts of your body at once.
+                            </p>
+                            <button type="button" class="btn btn-primary">Try Now</button>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-4">
+
+
+                    <div class="card">
+                            <div class="img-box">
+                                <img src="https://images.pexels.com/photos/2417473/pexels-photo-2417473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                            </div>
+                            <div class="content">
+                                <h2> Push Ups </h2>
+                                <p>
+                                        It is a compound exercise that uses muscles in the chest, shoulders, triceps, back, abs, and even the legs.
+
+                                </p>
+                                <button type="button" class="btn btn-primary">Try Now</button>
+                            </div>
+                        </div>
+
+            </div>
+
+            <div class="col-4">
+
+                    <div class="card">
+                            <div class="img-box">
+                                <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                            </div>
+                            <div class="content">
+                                <h2> Squats</h2>
+                                <p>
+                                        The rigorous calisthenic moves help improve your stamina, are a great exercise for the cardiovascular system, and relieve stress.
+
+                                </p>
+                                <button type="button" class="btn btn-primary">Try Now</button>
+                            </div>
+                        </div>
+
+            </div>
+            <div class="col-4">
+                    <div class="card">
+                            <div class="img-box">
+                                <img src="https://images.pexels.com/photos/2294352/pexels-photo-2294352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                            </div>
+                            <div class="content">
+                                <h2> Side Bend</h2>
+                                <p>
+                                        Side bends bring balance to your entire body. They lengthen the abdominal muscles, hips, and thigh muscles, while improving flexibility in the spine.
+
+
+                                </p>
+                                <button type="button" class="btn btn-primary">Try Now</button>
+                            </div>
+                        </div>
+            </div>
+        </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+<div class="col-md-4">
+  <!-- <div class="content-section">
+    <h3>Our Sidebar</h3>
+    <p class='text-muted'>You can put any information here you'd like.
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-light">Latest Posts</li>
+        <li class="list-group-item list-group-item-light">Announcements</li>
+        <li class="list-group-item list-group-item-light">Calendars</li>
+        <li class="list-group-item list-group-item-light">etc</li>
+      </ul>
+    </p>
+  </div> -->
+</div>
+</div>
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
